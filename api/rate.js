@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   
   const API_KEY = process.env.CURRENCY_API_KEY;
 
@@ -17,4 +17,4 @@ export default async function handler(req, res) {
     console.error(error);
     res.status(500).json({ message: 'Error al obtener las tasas de cambio', error: error.message });
   }
-}
+};
